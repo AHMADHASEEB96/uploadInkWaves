@@ -71,7 +71,7 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
 <div class="header ">
 
     <a href="/index.html" >
-        <div class="logo"><img src="../assets/media/images/logo.ng.png" alt="ink waves logo">
+        <div class="logo"><img src="./assets/media/images/logo.ng.png" alt="ink waves logo">
             <span style="font-family:  cairo; font-weight: bold; color: rgb(17, 78, 114);" class = "d-sm-none d-md-inline-block inkWaves-logo-word">InkWaves</span>
 
         </div>
@@ -138,13 +138,13 @@ document.querySelector(`.upper-page`).innerHTML = `<div class="container">
 <nav class="navbar">
     <ul class="">
         <li>
-            <a href="/pages/printing-options.html" id="a-1" itemName="print" class="listitem">
+            <a href="./pages/printing-options.html" id="a-1" itemName="print" class="listitem">
 
                 Print
             </a>
         </li>
         <!-- <li>
-            <a href="/pages/book-details.html" id="a-1" itemName="book-details" class="listitem w-100">
+            <a href="./pages/book-details.html" id="a-1" itemName="book-details" class="listitem w-100">
                 Book details
             </a>
         </li> -->
