@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page icon -->
+    <link rel="icon" href="/assets/media/images/logo.ng.png">
+    <!-- Page title -->
+    <title> Ink waves </title>
+    <!-- css bundle -->
+    <!-- summon the font awesome library -->
+    <link rel="stylesheet" href="/assets/css/fa-css/all.min.css">
+    <!-- summon the bootstrap toolkit -->
+    <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap/bootstrap.min.css.map">
+    <!-- summon the normalization file -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <!-- summon the media query stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style-media-query.css">
+    <!-- summon the stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- summon the Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400&family=Mulish:wght@200;300;400;500;600;700;800;900&family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,200;0,300;0,600;0,800;0,900;1,200;1,400;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="body-overlay hidden"></div>
+    <!-- For the header script to not throw an error for targeting a null element -->
+    <div class="dashboard-body-overlay hidden"></div> <!-- for this script to work on -->
+    <!-- ---------------------------------------------------------------Initiate Sign Modal window -->
+    <div id="sign-modal" class="hidden"> </div>
+
+    <!--  Initiate header and navbar  -->
+    <div class="background-opacity hidden"></div>
+    <div class="upper-page"></div>
+
+    <div id="landing-page">
+        <!-- ---------------------------------------------------------------Initiate hero section -->
+        <section class="hero user-dashboard-hero" sectionOf="hero" sectionTitle=".">
+            <div class="container">
+                <div class="hero-content">
+                    <h3>Manage your account </h3>
+                    <p class="hero-description">
+                        Surf your orders, wallet, update your information and more.
+                    </p>
+                    <!-- <button  class=" main-hero-service-btn hero-service-btn shop-more-btn"> Shop more </button>
+                    <button  class=" secondary-hero-service-btn hero-service-btn "> Print Now</button> -->
+                </div>
+            </div>
+
+        </section>
+
+        <div class="hero-nav-container hidden">
+            <ul class="hero-nav container">
+                <li style="font-family:  cairo; font-weight: bold; color: cadetblue;" id="page-nav-logo">InkWaves</li>
+                <!-- List items appended dynamically -->
+            </ul>
+        </div>
+        <!-- ---------------------------------------------------------------Initiate User dashboard -->
+
+        <section class="user-dashboard">
+            <div class="container">
+                <aside class='user-related-content-categories'>
+                    <div class="dashboard-hello-user">
+                        <div class="user-name-div "> Hello <span class='user-name fw-bold'> Ahmad</span> </div>
+                        <div class="user-mail-div">
+                            <p> amduseracc@gmail.com </p>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="aside-categories-div">
+                        <div class="dashboard-category-div" for-user-info='user-orders'><i
+                                class="fa-solid fa-rectangle-list user-info-category-icon"></i><span
+                                class="dashboard-category"> Orders </span>
+                        </div>
+                        <div class="dashboard-category-div" for-user-info='user-addresses'><i
+                                class="fa-solid fa-location-pin user-info-category-icon"></i><span
+                                class="dashboard-category"></span> Addresses
+                        </div>
+                        <div class="dashboard-category-div" for-user-info='user-payments'><i
+                                class="fa-solid fa-money-check-dollar user-info-category-icon"></i><span
+                                class="dashboard-category"></span>
+                            Payments </div>
+                        <div class="dashboard-category-div" for-user-info='user-profile'><i
+                                class="fa-solid fa-user user-info-category-icon"></i><span
+                                class="dashboard-category"></span> Profile </div>
+                    </div>
+
+                </aside>
+                <div class="user-related-content">
+
+                    <!-- ---------------------------------------------------------------Initiate Orders section -->
+                    <section class="user-orders user-content-section " sectionOf="user-orders" sectionTitle="Orders">
+                        <!-- The section is attached to the  div from the aside, inside the section, the title is attached to the div to open it
+attribute  opener-for and the div-id need to be the same , same goes for the attributes sectionOf and for-user-info-->
+
+                        <div class="order">
+                            <div class="user-order-main-info user-order-info-div">
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label">Total: </span>
+                                    <span class="user-order-div-value">EGP 871 </span>
+                                </div>
+
+                                <div class="user-order-div"><span class="user-order-div-label"> Items:</span><span
+                                        class="user-order-div-value"> 12
+                                    </span></div>
+
+                                <div class="order-buttons-div ms-auto">
+                                    <button class="order-full-details-button dashboard-buttons-style"
+                                        opener-for='user-order-full-details'> Full Details
+                                    </button>
+                                    <button class="order-full-details-button dashboard-buttons-style"
+                                        opener-for='user-order-items'> Order Items
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="user-order-full-details user-order-info-div user-div hidden"
+                                id='user-order-full-details'>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                                <div class="user-order-div">
+                                    <span class="user-order-div-label"> Status: </span>
+                                    <span class="user-order-div-value">Delivered </span>
+                                </div>
+                            </div>
+
+                            <div class="user-order-items  user-order-info-div user-div hidden" id='user-order-items'>
+                                Order items
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ------------------------------------------------------------ Initiate Addresses ------------------------------------------->
+                    <sections class="user-addresses user-content-section bg-white p-0" sectionOf="user-addresses"
+                        sectionTitle="Addresses">
+                        <h1> User Addresses </h1>
+
+                        <form class="addresses-form my-3" action="">
+                            <div class="addresses-form-fields">
+
+                                <div class="address-name">
+                                    <!-- Country -->
+                                    <label class="addresses-form-label" for="country">Address Name:</label>
+                                    <input class="addresses-form-input fw-bold" type="text" id="address-name"
+                                        name="address-name" placeholder='Address name' disabled>
+                                </div>
+
+                                <div class="country">
+                                    <!-- Country -->
+                                    <label class="addresses-form-label" for="country">Country:</label>
+                                    <input class="addresses-form-input" type="text" id="country" name="country"
+                                        value="Egypt" disabled>
+                                </div>
+
+                                <div class="governorate">
+                                    <!-- Governorate -->
+                                    <label class="addresses-form-label" for="governorate">Governorate:</label>
+                                    <select class="addresses-form-input addresses-form-governorate-list"
+                                        id="governorate" name="governorate" disabled>
+                                        <option style='padding: 10px;' value="cairo">Cairo</option>
+                                        <option value="alexandria">Alexandria</option>
+                                        <option value="giza">Giza</option>
+                                        <option value="luxor">Luxor</option>
+                                        <option value="aswan">Aswan</option>
+                                        <!-- Add more governorates as needed -->
+                                    </select>
+                                </div>
+
+                                <div class="city">
+                                    <!-- city -->
+                                    <label class="addresses-form-label" for="city">City:</label>
+                                    <input class="addresses-form-input" type="text" id="city" name="city" required
+                                        disabled>
+                                </div>
+                                <div class="district">
+                                    <!-- city -->
+                                    <label class="addresses-form-label" for="address-district">District:</label>
+                                    <input class="addresses-form-input" type="text" id="address-district"
+                                        name="district" required disabled>
+                                </div>
+                                <div class="street">
+                                    <!-- Street -->
+                                    <label class="addresses-form-label" for="street">Street:</label>
+                                    <input class="addresses-form-input" type="text" id="street" name="street" required
+                                        disabled>
+                                </div>
+
+                                <div class="building">
+                                    <!-- Building Name -->
+                                    <label class="addresses-form-label" for="building">Building Name:</label>
+                                    <input class="addresses-form-input" type="text" id="building" name="building"
+                                        required disabled>
+                                </div>
+
+                                <div class="apartment">
+                                    <!-- Apartment -->
+                                    <label class="addresses-form-label" for="apartment">Apartment:</label>
+                                    <input class="addresses-form-input" type="text" id="apartment" name="apartment"
+                                        required disabled>
+                                </div>
+
+                                <div class="zip">
+                                    <!-- Zip Code -->
+                                    <label class="addresses-form-label" for="zip">Zip Code:</label>
+                                    <input class="addresses-form-input" type="text" id="zip" name="zip" required
+                                        disabled>
+                                </div>
+
+                                <div class="landmark">
+                                    <!-- Landmark -->
+                                    <label class="addresses-form-label" for="landmark">Landmark:</label>
+                                    <input class="addresses-form-input" type="text" id="landmark" name="landmark"
+                                        disabled>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="addresses-form-actions">
+                                <input class="addresses-submit-button hidden dashboard-buttons-style" type="submit"
+                                    value="Submit">
+                                <button class="addresses-edit-button addresses-action-button dashboard-buttons-style">
+                                    Edit </button>
+                                <button
+                                    class="addresses-delete-button addresses-action-button text-danger dashboard-buttons-style">
+                                    Delete
+                                </button>
+                                <button
+                                    class="addresses-set-default-button addresses-action-button text-primary dashboard-buttons-style">
+                                    Set
+                                    as Default </button>
+
+                            </div>
+                        </form>
+                        <button class="add-new-address-btn addresses-action-button dashboard-buttons-style"> Add new
+                            address </button>
+
+                        <!-- ADD NEW ADDRESS -->
+                        <form class="addresses-form new-address-form hidden" action="">
+                            <div class="addresses-form-fields">
+
+                                <div class="address-name">
+                                    <!-- Country -->
+                                    <label class="addresses-form-label" for="country">Address Name:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-name"
+                                        name="address-name" placeholder='Give this address a distinguishing name'>
+                                </div>
+                                <div class="country">
+                                    <!-- Country -->
+                                    <label class="addresses-form-label" for="country">Country:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-country"
+                                        name="country" value="Egypt" disabled>
+                                </div>
+
+                                <div class="governorate">
+                                    <!-- Governorate -->
+                                    <label class="addresses-form-label" for="governorate">Governorate:</label>
+                                    <select class="addresses-form-input addresses-form-governorate-list"
+                                        id="new-address-governorate" name="governorate">
+                                        <option style='padding: 10px;' value="cairo">Cairo</option>
+                                        <option value="alexandria">Alexandria</option>
+                                        <option value="giza">Giza</option>
+                                        <option value="luxor">Luxor</option>
+                                        <option value="aswan">Aswan</option>
+                                        <!-- Add more governorates as needed -->
+                                    </select>
+                                </div>
+
+                                <div class="city">
+                                    <!-- city -->
+                                    <label class="addresses-form-label" for="city">City:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-city" name="city"
+                                        required>
+                                </div>
+                                <div class="district">
+                                    <!-- city -->
+                                    <label class="addresses-form-label" for="new-address-district">District:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-district"
+                                        name="city" required>
+                                </div>
+                                <div class="street">
+                                    <!-- Street -->
+                                    <label class="addresses-form-label" for="street">Street:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-street"
+                                        name="street" required>
+                                </div>
+
+                                <div class="building">
+                                    <!-- Building Name -->
+                                    <label class="addresses-form-label" for="building">Building :</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-building"
+                                        name="building" required>
+                                </div>
+
+                                <div class="apartment">
+                                    <!-- Apartment -->
+                                    <label class="addresses-form-label" for="apartment">Apartment:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-apartment"
+                                        name="apartment" required>
+                                </div>
+
+                                <div class="zip">
+                                    <!-- Zip Code -->
+                                    <label class="addresses-form-label" for="zip">Zip Code:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-zip" name="zip"
+                                        required>
+                                </div>
+
+                                <div class="landmark">
+                                    <!-- Landmark -->
+                                    <label class="addresses-form-label" for="landmark">Landmark:</label>
+                                    <input class="addresses-form-input" type="text" id="new-address-landmark"
+                                        name="landmark">
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="addresses-form-actions">
+                                <input class="addresses-submit-button dashboard-buttons-style" type="submit"
+                                    value="Submit">
+                                <button
+                                    class="close-new-address-modal dashboard-buttons-style addresses-action-button text-danger">
+                                    Close
+                                </button>
+
+                            </div>
+                        </form>
+                    </sections>
+                    <!-- ------------------------------------------------------------ Initiate Payments ------------------------------------------->
+                    <sections class="user-payments user-content-section" sectionOf="user-payments"
+                        sectionTitle="Payments">
+                        <h1> User Payments </h1>
+                        <div class="payment-cards-holder" style="padding: 20px;">
+                            <div class="payment-card">
+                                <div class="payment-card-type-holder payment-divs-holder">
+                                    <i class="fa-brands fa-cc-visa fs-1"></i>
+                                </div>
+                                <div class="payment-card-number-holder payment-divs-holder">
+                                    **** **** **** 7786
+                                </div>
+                                <div class="payment-card-expiry-date-holder payment-divs-holder">
+                                    <span class="payment-card-expiry-label"> Expires in: </span> <span
+                                        class="payment-card-expiry-date"> 01/02</span>
+                                </div>
+                                <div class="payment-card-deletion-button-holder payment-divs-holder">
+                                    <button class="delete-payment-card dashboard-buttons-style text-danger"> Delete card
+                                    </button>
+                                </div>
+                                <div class="payment-card-set-default-holder payment-divs-holder">
+                                    <span class="fw-bold"> Default </span>
+
+                                    <div class="toggle-switch">
+                                        <input class="toggle-input" id="toggle" type="checkbox">
+                                        <label class="toggle-label" for="toggle"></label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </sections>
+                    <section class="update-user-info user-content-section hidde" sectionOf="user-profile"
+                        sectionTitle="Profile">
+
+                        <h3 class=""> Profile </h3>
+                        <hr>
+                        <div id="user-profile-div" class="user-di">
+                            <form action="" class="sign-up-form sign-form update-user-info-form ">
+                                <h4 class="my-2"> User Information </h4>
+                                <div class="names-div profile-form-divs-holder">
+                                    <div class="f-name-div name-div profile-form-div">
+                                        <label for="first-name "> First name </label>
+                                        <input id="first-name" class='full-width-input' type="text" value="Ink"
+                                            required>
+                                    </div>
+                                    <div class="l-name-div name-div profile-form-div"><label for="last-name">Last
+                                            name</label>
+                                        <input id="last-name" class='full-width-input' type="text" value="Waves"
+                                            required>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div
+                                    class=' profile-form-divs-holder d-flex justify-content-center align-items-end gap-3'>
+                                    <div class="phone-number-div profile-form-div">
+                                        <label for="phone-num"> Phone number </label>
+                                        <input id="phone-num" class='full-width-input' type="phone"
+                                            placeholder="Phone number" required>
+                                        </input>
+                                    </div>
+                                    <div class="genders-div d-flex gap-2 pb-2">
+                                        <div class="gender-male-div gender-div d-flex align-items-center gap-2">
+                                            <label for="male-radio" style="font-size: 12px;"> Male </label>
+                                            <input name="update-gender" class='full-width-input' value='male'
+                                                class="form-check-inpu" type="radio" id="male-radio" required>
+                                        </div>
+                                        <div class="gender-female-div gender-div d-flex align-items-center gap-2">
+                                            <label for="female-radio" style="font-size: 12px;"> Female </label>
+                                            <input name="update-gender" value='female' class="form-check-inpu"
+                                                type="radio" id="female-radio">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mail-pass update-mail-div profile-form-divs-holder align-items-end">
+                                    <div class="profile-form-div">
+                                        <label for="e-mail"> E-mail</label>
+                                        <input id="e-mail" class='full-width-input' type="email" placeholder="E-mail"
+                                            autocomplete="username" required>
+                                    </div>
+                                    <div class="profile-form-div ">
+                                        <label for="current-pass"> Code </label>
+                                        <input id="mail-verification-code"
+                                            class='full-width-input mail-verification-disabled-controls' type="number"
+                                            placeholder="Verification code" disabled>
+                                    </div>
+                                    <div class="profile-form-div ">
+                                        <button class='update-button mail-verification-disabled-controls ' disabled>
+                                            update email </button>
+                                    </div>
+                                </div>
+                                <div class="separator"
+                                    style='height: 10px; background-color: white; border-radius: 10px; margin: 10px 0;'>
+                                </div>
+                                <input type="submit" value="Update" class="btn btn-primary ">
+                                </input>
+                            </form>
+
+                            <button class='update-button open-update-pass-modal dashboard-buttons-style my-4'> Update
+                                Password ? </button>
+
+                            <div class="update-pass-modal hidden">
+                                <div class="new-pass-div profile-form-div">
+                                    <label for="current-pass">Current password</label>
+                                    <div class="input-div">
+                                        <input id="current-password" class='full-width-input' type="password"
+                                            placeholder="Current password">
+                                        <button class='show-pass-btn'>
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="validation-message" id="current-password-validation"></div>
+                                </div>
+                                <div class="new-pass-div profile-form-div">
+                                    <label for="new-pass">New password</label>
+                                    <div class="input-div">
+                                        <input id="new-pass" class='full-width-input' type="password"
+                                            placeholder="Password">
+                                        <button class='show-pass-btn'>
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="validation-message" id="new-pass-validation"></div>
+                                </div>
+                                <div class="confirm-new-pass-div new-pass-div profile-form-div">
+                                    <label for="confirm-new-pass">Confirm new password</label>
+                                    <div class="input-div">
+
+                                        <input id="confirm-new-pass" class='full-width-input' type="password"
+                                            placeholder="Confirm Password">
+                                        <button class='show-pass-btn'>
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="validation-message" id="confirm-new-pass-validation"></div>
+                                </div>
+
+                                <button
+                                    class='update-button update-pass-now my-4 dashboard-buttons-style'>Update</button>
+                                <button class="close-update-pass-modal dashboard-buttons-style">Close</button>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </section>
+                    <!--  -->
+                    <!-- User Personal Information -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ---------------------------------------------------------------Initiate Update info section -->
+
+
+        <!-- ------------------------------------------------------------ Initiate get in touch------------------------------------------->
+        <section class="attract-user  talk-with-us section" sectionOf="talk-with-us" sectionTitle="talk with us">
+            <div class="container">
+                <h4> Get to Know us more </h4>
+                <p> We Promise a good printing and book selling service that pleases all the Fine tastes. <br>
+                    <span class="talk-or-sign"> Talk with us know</span> to get to know more about what we can provide.
+                </p>
+                <div class="buttons "><button class=""> Check our service </button><button class="">Talk with
+                        us</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------------------------------------------------ Initiate Footer------------------------------------------->
+        <footer></footer>
+
+        <!-- js bundle -->
+        <!-- summon the font awesome library -->
+        <script src="/assets/js/fa-js/all.min.js"></script>
+        <!-- summon the bootstrap toolkit -->
+        <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
+        <script src="/assets/js/bootstrap/bootstrap.js"></script>
+        <!-- summon the app file -->
+        <script type="module" src="/assets/js/sharedJs/header-footer-and-sign-modal.js"></script>
+
+        <script type='module' src="/assets/js/user-dashboard.js"></script>
+        <script src="/assets/js/bootstrap.min.js.map"></script>
+        <!-- Import the scripts those will Implement the styles into the google Auth buttons -->
+        <script src="https://accounts.google.com/gsi/client" async></script>
+        <!-- Decode the Jwt received from google  -->
+        <script src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
+
+</body>
+
+</html>
